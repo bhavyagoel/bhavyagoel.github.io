@@ -5,7 +5,8 @@
   height: fit-content;
   padding: 0.7rem;
   padding-bottom: 0rem;
-  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.125);
+  text-decoration: none;
+  /* border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.125); */
 }
 
 .skills-section .skill-card-link {
@@ -16,21 +17,54 @@
   margin-right: 0.5rem;
 }
 
-.skills-section .card {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  height: 100%;
+.card .card-head .sub-title span:nth-child(1) {
+  float: left;
+}
+.card .card-head .sub-title span:nth-child(2) {
+  float: right;
+}
+
+.skills-section .card .card-head .sub-title {
+  color: #8392a5;
+  margin-top: 0.4rem;
+  /* margin-bottom: 0.5rem; */
+  /* height: 100%; */
 }
 
 .skills-section .card .card-body {
-  padding-top: 0.2rem;
-  padding-left: 0.7rem;
+  /* padding-top: 0.2rem; */
+  padding: 0.7rem;
+}
+
+.filtr-skills {
+  padding: 1rem !important;
+}
+
+.skills-card-footer {
+  display: flex;
+}
+
+.skills-tags-holder {
+  width: 70%;
+}
+
+.skills-btn-holder {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.skills-btn-holder span {
+  justify-content: flex-end;
+  display: flex;
 }
 
 /* ============= Device specific fixes ======= */
 
 /* Large screens such as TV */
 @media only screen and (min-width: 1824px) {
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -43,6 +77,21 @@
 
 /* IPad Pro */
 @media (max-width: 1024px) {
+  .skills-section {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  .skills-section .container {
+    max-width: 100%;
+  }
+  .skills-section .filtr-skills {
+    padding: 0;
+  }
+  .skills-section .filtr-item {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
 }
 
 /*  Large devices (desktops, 992px and up) */
@@ -56,15 +105,34 @@
   .skills-section {
     padding-left: 0;
     padding-right: 0;
+    width: 100%;
   }
   .skills-section .container {
     max-width: 95%;
+    max-width: 100%;
+  }
+
+  .skills-section .filtr-skills {
+    padding: 0;
+  }
+  .skills-section .filtr-item {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    flex: 50%;
+    max-width: calc(100% / 2 - 0.2rem);
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 
 @media only screen and (max-width: 576px) {
+  .skills-section .btn {
+    margin-top: 0.3125rem;
+  }
+  .skills-section .filtr-item {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 /* iPhoneX, iPhone 6,7,8 */

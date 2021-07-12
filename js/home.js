@@ -1,6 +1,7 @@
 "use strict";
 
 var projectCards;
+var skillCards;
 
 (function ($) {
   jQuery(document).ready(function () {
@@ -79,7 +80,76 @@ var projectCards;
 
     var projectCardHolder = document.getElementById("project-card-holder");
     if (projectCardHolder != null && projectCardHolder.children.length != 0) {
-      projectCards = $(".filtr-projects").filterizr({ layout: 'sameWidth' });
+      projectCards = $(".filtr-projects").filterizr({ 
+        layout: 'sameWidth' , 
+        filter: 'hobby', 
+        setupControls: false, 
+      });
+
+      $('.professional').click(function() {
+        projectCards.filterizr('filter', 'professional');
+      });
+
+      $('.academic').click(function() {
+        projectCards.filterizr('filter', 'academic');
+      });
+
+      $('.hobby').click(function() {
+        projectCards.filterizr('filter', 'hobby');
+      });
+
+      $('.all').click(function() {
+        projectCards.filterizr('filter', 'all');
+      });
+    
+    }
+
+    // ================== Skill cards =====================
+    // Add click action on Skill category selector buttons
+    var filterButtons_1 = document.getElementById("skills-filter-buttons");
+    if (filterButtons_1 != null) {
+      var btns_1 = filterButtons_1.children;
+
+      for (let i = 0; i < btns_1.length; i++) {
+        btns_1[i].onclick = function () {
+          showGithubStars(btns_1[i].id);
+        }
+      }
+    }
+
+    var projectCardHolder_1 = document.getElementById("skills-card-holder");
+    if (projectCardHolder_1 != null && projectCardHolder_1.children.length != 0) {
+      skillCards = $(".filtr-skills").filterizr({
+         layout: 'sameWidth' ,
+         filter: 'technology' ,
+         setupControls: false
+        
+      });
+
+      $('.all_1').click(function() {
+        skillCards.filterizr('filter', 'all_1');
+      });
+
+      $('.technology').click(function() {
+        skillCards.filterizr('filter', 'technology');
+      });
+
+      $('.proglang').click(function() {
+        skillCards.filterizr('filter', 'proglang');
+      });
+
+      $('.framework').click(function() {
+        skillCards.filterizr('filter', 'framework');
+      });
+
+      $('.database').click(function() {
+        skillCards.filterizr('filter', 'database');
+      });
+
+      $('.tool').click(function() {
+        skillCards.filterizr('filter', 'tool');
+      });
+
     }
 
     function showGithubStars() {
