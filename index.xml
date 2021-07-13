@@ -6,7 +6,16 @@
     <description>Recent content on Bhavya Goel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jun 2019 23:53:00 +0100</lastBuildDate><atom:link href="https://bhavyagoel.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jun 2020 08:06:25 +0600</lastBuildDate><atom:link href="https://bhavyagoel.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash Variables</title>
+      <link>https://bhavyagoel.github.io/notes/test/sub-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bhavyagoel.github.io/notes/test/sub-test/</guid>
+      <description>Variable NAME=&amp;#34;Bhavya&amp;#34; echo $NAME echo &amp;#34;$NAME&amp;#34; echo &amp;#34;${NAME}    Condition if [[ -z &amp;#34;$string&amp;#34; ]]; then echo &amp;#34;String is empty&amp;#34; elif [[ -n &amp;#34;$string&amp;#34; ]]; then echo &amp;#34;String is not empty&amp;#34; fi     </description>
+    </item>
+    
     <item>
       <title>Resultados de Búsqueda</title>
       <link>https://bhavyagoel.github.io/search/</link>
@@ -330,6 +339,25 @@ No content shown here is rendered, all content is based in the template layouts/
 Setting a very low sitemap priority will tell search engines this is not important content.
 This implementation uses Fusejs, jquery and mark.js
 Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://bhavyagoel.github.io/posts/introduction/</link>
+      <pubDate>Mon, 08 Jun 2020 08:06:25 +0600</pubDate>
+      
+      <guid>https://bhavyagoel.github.io/posts/introduction/</guid>
+      <description>Greeting! This is an introduction post. This post tests the followings:
+ Hero image is in the same directory as the post. This post should be at top of the sidebar. Post author should be the same as specified in author.yaml file.  </description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://bhavyagoel.github.io/posts/machine-learning/</link>
+      <pubDate>Mon, 08 Jun 2020 08:06:25 +0600</pubDate>
+      
+      <guid>https://bhavyagoel.github.io/posts/machine-learning/</guid>
+      <description>Greeting! This is an ml post.</description>
     </item>
     
     <item>
@@ -347,7 +375,7 @@ Initial setup Search depends on additional output content type of JSON in config
       <pubDate>Mon, 17 Jun 2019 23:53:00 +0100</pubDate>
       
       <guid>https://bhavyagoel.github.io/codes/credits/</guid>
-      <description>The images used in the site comes from https://getavataaars.com/.</description>
+      <description></description>
     </item>
     
     <item>
@@ -361,6 +389,15 @@ No content shown here is rendered, all content is based in the template layouts/
 Setting a very low sitemap priority will tell search engines this is not important content.
 This implementation uses Fusejs, jquery and mark.js
 Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>Top Category Sample</title>
+      <link>https://bhavyagoel.github.io/posts/category/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bhavyagoel.github.io/posts/category/</guid>
+      <description></description>
     </item>
     
   </channel>

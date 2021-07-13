@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test Notes on Bhavya Goel</title>
+    <link>https://bhavyagoel.github.io/notes/test/</link>
+    <description>Recent content in Test Notes on Bhavya Goel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://bhavyagoel.github.io/notes/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash Variables</title>
+      <link>https://bhavyagoel.github.io/notes/test/sub-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bhavyagoel.github.io/notes/test/sub-test/</guid>
+      <description>Variable NAME=&amp;#34;Bhavya&amp;#34; echo $NAME echo &amp;#34;$NAME&amp;#34; echo &amp;#34;${NAME}    Condition if [[ -z &amp;#34;$string&amp;#34; ]]; then echo &amp;#34;String is empty&amp;#34; elif [[ -n &amp;#34;$string&amp;#34; ]]; then echo &amp;#34;String is not empty&amp;#34; fi     </description>
+    </item>
+    
+  </channel>
+</rss>

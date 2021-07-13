@@ -2,9 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bhavyagoel.github.io/search/</loc>
-    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
-    <priority>0.1</priority>
+    <loc>https://bhavyagoel.github.io/notes/test/sub-test/</loc>
   </url><url>
     <loc>https://bhavyagoel.github.io/search/</loc>
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
@@ -102,10 +100,20 @@
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://bhavyagoel.github.io/codes/about/</loc>
-    <lastmod>2019-06-17T23:53:00+01:00</lastmod>
+    <loc>https://bhavyagoel.github.io/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
   </url><url>
     <loc>https://bhavyagoel.github.io/</loc>
+    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
+  </url><url>
+    <loc>https://bhavyagoel.github.io/posts/introduction/</loc>
+    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
+  </url><url>
+    <loc>https://bhavyagoel.github.io/posts/machine-learning/</loc>
+    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
+  </url><url>
+    <loc>https://bhavyagoel.github.io/codes/about/</loc>
     <lastmod>2019-06-17T23:53:00+01:00</lastmod>
   </url><url>
     <loc>https://bhavyagoel.github.io/codes/</loc>
@@ -114,10 +122,10 @@
     <loc>https://bhavyagoel.github.io/codes/credits/</loc>
     <lastmod>2019-06-17T23:53:00+01:00</lastmod>
   </url><url>
-    <loc>https://bhavyagoel.github.io/notes/</loc>
-    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
-  </url><url>
     <loc>https://bhavyagoel.github.io/posts/</loc>
+    <lastmod>2019-06-17T23:53:00+01:00</lastmod>
+  </url><url>
+    <loc>https://bhavyagoel.github.io/notes/</loc>
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
   </url><url>
     <loc>https://bhavyagoel.github.io/categories/</loc>
@@ -126,5 +134,9 @@
     <priority>0.1</priority>
   </url><url>
     <loc>https://bhavyagoel.github.io/tags/</loc>
+  </url><url>
+    <loc>https://bhavyagoel.github.io/notes/test/</loc>
+  </url><url>
+    <loc>https://bhavyagoel.github.io/posts/category/</loc>
   </url>
 </urlset>
