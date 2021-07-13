@@ -82,20 +82,28 @@ var skillCards;
     if (projectCardHolder != null && projectCardHolder.children.length != 0) {
       projectCards = $(".filtr-projects").filterizr({ 
         layout: 'sameWidth' , 
-        filter: 'hobby', 
+        filter: 'ml_dl', 
         setupControls: false, 
       });
 
-      $('.professional').click(function() {
-        projectCards.filterizr('filter', 'professional');
+      $('.ml_dl').click(function() {
+        projectCards.filterizr('filter', 'ml_dl');
       });
 
-      $('.academic').click(function() {
-        projectCards.filterizr('filter', 'academic');
+      $('.gen_cs').click(function() {
+        projectCards.filterizr('filter', 'gen_cs');
       });
 
-      $('.hobby').click(function() {
-        projectCards.filterizr('filter', 'hobby');
+      $('.web').click(function() {
+        projectCards.filterizr('filter', 'web');
+      });
+
+      $('.app').click(function() {
+        projectCards.filterizr('filter', 'app');
+      });
+
+      $('.misc').click(function() {
+        projectCards.filterizr('filter', 'misc');
       });
 
       $('.all').click(function() {
