@@ -6,7 +6,7 @@
     <description>Recent content on Bhavya Goel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jul 2021 00:25:10 +0530</lastBuildDate><atom:link href="https://bhavyagoel.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 18:46:31 +0530</lastBuildDate><atom:link href="https://bhavyagoel.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash Variables</title>
       <link>https://bhavyagoel.github.io/notes/test/sub-test/</link>
@@ -342,6 +342,16 @@ Initial setup Search depends on additional output content type of JSON in config
     </item>
     
     <item>
+      <title>Semi Supervised Joint Learning for Hand Gesture Recognition</title>
+      <link>https://bhavyagoel.github.io/posts/ai/imgproc/gestrecog/rp_1/</link>
+      <pubDate>Wed, 14 Jul 2021 18:46:31 +0530</pubDate>
+      
+      <guid>https://bhavyagoel.github.io/posts/ai/imgproc/gestrecog/rp_1/</guid>
+      <description>Features  This is for Static Gestures Hand Gesture and Hand Pose Recognition Semi-Supervised learning scheme used to solve the problem of lacking proper annotation 3-D Hand Pose with foreground hand, and hand gesture Unconstrained environment dataset  &amp;ndash; Hand Posture: Only classify in classes &amp;ndash; Hand Posture: positions of finger joints, view point, rotation, scale and so on.
+Semi-Supervised Scheme   Knowledge Transfer: Transfer annotation by extracting shared features from hand gesture to hand pose and vice versa.</description>
+    </item>
+    
+    <item>
       <title>Sample Markdown</title>
       <link>https://bhavyagoel.github.io/posts/sample/</link>
       <pubDate>Wed, 14 Jul 2021 00:25:10 +0530</pubDate>
@@ -349,15 +359,6 @@ Initial setup Search depends on additional output content type of JSON in config
       <guid>https://bhavyagoel.github.io/posts/sample/</guid>
       <description>This is a sample post intended to test the followings:
  Set custom hero image, and post author. Various Image tags and their functionalities including the short-code and partial codes intended. Enabling table of contents. Various forms of markdown content rendering, along with various tags and embedding features. Rendering of mathematical formulaes, and emojis. Nesting of posts according to the category, which includes sub-categories nesting and other features. Media rendering that includes images, tweets, YT Video, Vimeo Video and PDFs.</description>
-    </item>
-    
-    <item>
-      <title>Artificial Intelligence</title>
-      <link>https://bhavyagoel.github.io/posts/artificial_intelligence/</link>
-      <pubDate>Wed, 14 Jul 2021 00:21:50 +0530</pubDate>
-      
-      <guid>https://bhavyagoel.github.io/posts/artificial_intelligence/</guid>
-      <description>Hello, this is my first blog</description>
     </item>
     
     <item>
@@ -389,15 +390,6 @@ No content shown here is rendered, all content is based in the template layouts/
 Setting a very low sitemap priority will tell search engines this is not important content.
 This implementation uses Fusejs, jquery and mark.js
 Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
-    </item>
-    
-    <item>
-      <title>Top Category Sample</title>
-      <link>https://bhavyagoel.github.io/posts/category/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bhavyagoel.github.io/posts/category/</guid>
-      <description></description>
     </item>
     
   </channel>

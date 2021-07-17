@@ -186,23 +186,5 @@ Initial setup Search depends on additional output content type of JSON in config
  Set custom hero image, and post author. Various Image tags and their functionalities including the short-code and partial codes intended. Enabling table of contents. Various forms of markdown content rendering, along with various tags and embedding features. Rendering of mathematical formulaes, and emojis. Nesting of posts according to the category, which includes sub-categories nesting and other features. Media rendering that includes images, tweets, YT Video, Vimeo Video and PDFs.</description>
     </item>
     
-    <item>
-      <title>Artificial Intelligence</title>
-      <link>https://bhavyagoel.github.io/posts/artificial_intelligence/</link>
-      <pubDate>Wed, 14 Jul 2021 00:21:50 +0530</pubDate>
-      
-      <guid>https://bhavyagoel.github.io/posts/artificial_intelligence/</guid>
-      <description>Hello, this is my first blog</description>
-    </item>
-    
-    <item>
-      <title>Top Category Sample</title>
-      <link>https://bhavyagoel.github.io/posts/category/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bhavyagoel.github.io/posts/category/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
