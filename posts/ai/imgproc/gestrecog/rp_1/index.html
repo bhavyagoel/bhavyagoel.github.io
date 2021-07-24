@@ -343,12 +343,28 @@
 <ul>
 <li>21 Hand Joints used to detect the hand pose</li>
 <li>Used reference to detect 3D hand pose</li>
+<li>[Orthogonal Projection] 2D projection of the 3D hand is taken, and origin is the root of middle finger.</li>
+<li><a href="https://en.wikipedia.org/wiki/3D_rotation_group">3D Rotation Group</a></li>
 </ul>
 </li>
 </ul>
+<div style="margin-top: 3rem;"></div>
+<h4 id="hand-image-reconstruction">Hand Image Reconstruction</h4>
+<p><cite>Reference<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></cite></p>
+<ul>
+<li>Variational Autoencoders</li>
+<li>L1 loss and KL (Kullback-Lieber loss) used to calculate the loss of reconstruction</li>
+</ul>
+<h4 id="semi-supervised">Semi-Supervised</h4>
+<p>$$
+\ L = \lambda_1L_{detection}+\lambda_2L_{gesture}+\lambda_3L_{rel}+\lambda_4L_{view}+\lambda_5L_{recons}
+$$</p>
+<ul>
+<li>As all the datasets doesn&rsquo;t have all the annotations, there significance is turned on or off accordingly.</li>
+</ul>
 <hr>
 <h2 id="research-paper">Research paper</h2>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"
   integrity="sha512-Q0SyiCpjyVOjMJ28RDpmCxi0Drmc9cr7fBQuW2F5F7yiS0yTWtbbltd+H5BYhaA7Izpm6nyIXAUppQfdm6zt1w=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.worker.min.js"
@@ -481,11 +497,15 @@
     });
   }
 
-</script> --><section class="footnotes" role="doc-endnotes">
+</script>
+<section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
 <p>Zimmermann, C.; Brox, T. Learning to estimate 3d hand pose from single rgb images. In Proceedings of the IEEE International Conference on Computer Vision, Venice, Italy, 22–29 October 2017; pp. 4903–4911.M&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Xu, C.; Cai, W.; Li, Y.; Zhou, J.; Wei, L. Accurate Hand Detection from Single-Color Images by Reconstructing Hand Appearances.Sensors 2020, 20, 192. <a href="https://www.mdpi.com/1424-8220/20/1/192">CrossRef</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -571,6 +591,8 @@
         <li><a href="#approach">Approach</a>
           <ul>
             <li><a href="#framework">Framework</a></li>
+            <li><a href="#hand-image-reconstruction">Hand Image Reconstruction</a></li>
+            <li><a href="#semi-supervised">Semi-Supervised</a></li>
           </ul>
         </li>
       </ul>
