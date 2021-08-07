@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Semi Supervised Joint Learning for Hand Gesture Recognition</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css"/>
+<link rel="stylesheet" href="../../../../css/layouts/main.css"/>
+<link rel="stylesheet" href="../../../../css/navigators/navbar.css"/>
+<link rel="stylesheet" href="../../../../css/plyr.css"/>
+<link rel="stylesheet" href="../../../../css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="../../../../images/site/logo_hu54bb19e9d0a2e74cfaed7417fa8c856b_6440_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="Semi Supervised Joint Learning for Hand Gesture Recognition" />
+<meta property="og:description" content="Features  This is for Static Gestures Hand Gesture and Hand Pose Recognition Semi-Supervised learning scheme used to solve the problem of lacking proper annotation 3-D Hand Pose with foreground hand, and hand gesture Unconstrained environment dataset  &ndash; Hand Posture: Only classify in classes &ndash; Hand Posture: positions of finger joints, view point, rotation, scale and so on.
+Semi-Supervised Scheme   Knowledge Transfer: Transfer annotation by extracting shared features from hand gesture to hand pose and vice versa." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bhavyagoel.github.io/posts/research-paper/ai/rp-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-14T18:46:31+05:30" />
+<meta property="article:modified_time" content="2021-07-14T18:46:31+05:30" />
+
+
+
+    
+    
+<meta name="description" content="Semi Supervised Joint Learning for Hand Gesture Recognition" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="../../../../css/layouts/single.css"/>
+<link rel="stylesheet" href="../../../../css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="../../../../css/style.css"/>
+
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="../../../../">
+      
+        <img src="../../../../images/site/logo_hu54bb19e9d0a2e74cfaed7417fa8c856b_6440_42x0_resize_box_3.png" alt="Logo">
+      Bhavya Goel</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="../../../../images/site/logo_hu54bb19e9d0a2e74cfaed7417fa8c856b_6440_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="../../../../images/site/logo_hu54bb19e9d0a2e74cfaed7417fa8c856b_6440_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="../../../../search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="../../../../posts" data-filter="all">Blogs</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="../../../../posts/research-paper/">research</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="../../../../posts/research-paper/ai/">ai-research</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../../posts/research-paper/ai/rp-2/" title="Active Learning - Speech Recog">Active Learning - Speech Recog</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="../../../../posts/research-paper/ai/rp-1/" title="Hand Gest Recog - Semi Supervised">Hand Gest Recog - Semi Supervised</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../../posts/research-paper/blockchain/" title="blockchain-research">blockchain-research</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="../../../../posts/sample/" title="Sample Markdown Snippet">Sample Markdown Snippet</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://bhavyagoel.github.io/posts/research-paper/ai/rp-1/hero.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='../../../../images/default-avatar_hueaef53525ccea1a5a969b216a97feeba_33755_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Bhavya Goel</h5>
+          <p>July 14, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>Semi Supervised Joint Learning for Hand Gesture Recognition</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h3 id="features">Features</h3>
+<ul>
+<li>This is for <strong>Static Gestures</strong></li>
+<li>Hand Gesture and Hand Pose Recognition</li>
+<li>Semi-Supervised learning scheme used to solve the problem of lacking proper annotation</li>
+<li>3-D Hand Pose with foreground hand, and hand gesture</li>
+<li>Unconstrained environment dataset</li>
+</ul>
+<p>&ndash; Hand Posture: Only classify in classes <br>
+&ndash; Hand Posture: positions of finger joints, view point, rotation, scale and so on.</p>
+<h3 id="semi-supervised-scheme">Semi-Supervised Scheme</h3>
+<ul>
+<li>
+<p><em>Knowledge Transfer</em>: Transfer annotation by extracting shared features from hand gesture to hand pose and vice versa.</p>
+</li>
+<li>
+<p><em>Image Reconstruction</em>: Enocdes input to low dimensional latent code and then reconstructs the image.</p>
+</li>
+<li>
+<p><em>Traditional Methods</em>-</p>
+<ul>
+<li>Low Level
+<ul>
+<li>SIFT - Scale Invariant Feature Transform</li>
+<li>Image Moments</li>
+<li>Gabor Filters - For texture analysis, checks whethere there is a particular frequency content in a specific direction in a localized region.</li>
+</ul>
+</li>
+<li>CNN
+<ul>
+<li>deep features extracted from cloud points for SVM Classification</li>
+<li>stacked denoising auto-encoders</li>
+<li>sof attention mechanism</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>&ndash; Graph Convolution Network</p>
+<ul>
+<li><em>Complex Environment</em>- In a complex environment necessary to separate hand
+<ul>
+<li>Skin color</li>
+<li>SVM Classifier based on HOG Feature (Histogram Oriented Gradients)</li>
+<li>combining deep and shallow layers</li>
+</ul>
+</li>
+</ul>
+<h3 id="approach">Approach</h3>
+<ol>
+<li>Foreground hand detection</li>
+<li>shared feature extraction</li>
+<li>hand gesture recognition</li>
+<li>hand pose estimation</li>
+<li>hand image reconstruction</li>
+</ol>
+<h4 id="framework">Framework</h4>
+<img src="../../../../posts/researchImg/rp-1.png"
+    
+        alt="The framework of the proposed approach"
+    
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+<ul>
+<li><strong>Stage 1</strong> (Separate Foreground hands from Background)
+<ul>
+<li>Extract background hands with foreground using FPN (Feature Pyramid Netowrk), FPN takes last 4 stages of ResNet as input and generates the multi-level feature maps.</li>
+<li>Region Proposal Network(RPN) takes multi-level feature as input and generates set of region proposal</li>
+<li>ROI layer extracts features for each region proposal, then foreground hand predics whether it is foreground or background, hence refines the selection more.</li>
+</ul>
+</li>
+<li><strong>Stage 2</strong> (Shared Feature Extraction)
+<ul>
+<li>lighweight CNN</li>
+<li>constructed using inversted residual blocks</li>
+<li>intermediate expansion layer in the block uses lightweight depth-wise convolutions</li>
+<li>size of each cropped hand 256x256x3</li>
+<li>multiple inverted residual blocks, resulting 8x8x1280</li>
+<li>generate latent code with Guassian Distribution</li>
+<li>shared feature fed to 1x1 conv it converts 120 to 128, estimating the parameters of gaussian distrib. of latent code</li>
+</ul>
+</li>
+<li><strong>Stage 3a</strong> (Hand Gesture Recog)
+<ul>
+<li>8x8x128 converted to 512 size,</li>
+<li>512 to num classes, and finally softmax</li>
+<li>cross entropy loss</li>
+</ul>
+</li>
+<li><strong>Stage 3b</strong> (Hand Pose Estimation) <cite>Reference<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite>
+<ul>
+<li>21 Hand Joints used to detect the hand pose</li>
+<li>Used reference to detect 3D hand pose</li>
+<li>[Orthogonal Projection] 2D projection of the 3D hand is taken, and origin is the root of middle finger.</li>
+<li><a href="https://en.wikipedia.org/wiki/3D_rotation_group">3D Rotation Group</a></li>
+</ul>
+</li>
+</ul>
+<div style="margin-top: 3rem;"></div>
+<h4 id="hand-image-reconstruction">Hand Image Reconstruction</h4>
+<p><cite>Reference<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></cite></p>
+<ul>
+<li>Variational Autoencoders</li>
+<li>L1 loss and KL (Kullback-Lieber loss) used to calculate the loss of reconstruction</li>
+</ul>
+<h4 id="semi-supervised">Semi-Supervised</h4>
+<p>$$
+\ L = \lambda_1L_{detection}+\lambda_2L_{gesture}+\lambda_3L_{rel}+\lambda_4L_{view}+\lambda_5L_{recons}
+$$</p>
+<ul>
+<li>As all the datasets doesn&rsquo;t have all the annotations, there significance is turned on or off accordingly.</li>
+</ul>
+<hr>
+<h2 id="research-paper">Research paper</h2>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"
+  integrity="sha512-Q0SyiCpjyVOjMJ28RDpmCxi0Drmc9cr7fBQuW2F5F7yiS0yTWtbbltd+H5BYhaA7Izpm6nyIXAUppQfdm6zt1w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.worker.min.js"
+  integrity="sha512-kxBikBDcUHWvfvzNZVSRe+1mJ2MSHFe5+WVUCdTTUN3oHo/3GWPDUhiO0jtFCUcs+VnSk6BMGYC3IGuwe3qXVg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+  #the-canvas {
+    border: 1px solid black;
+    direction: ltr;
+    width: 100%;
+    height: auto;
+  }
+
+  #paginator {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div id="paginator">
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+  &nbsp; &nbsp;
+  <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+</div>
+<div id="embed-pdf-container">
+  <canvas id="the-canvas"></canvas>
+</div>
+
+<script type="text/javascript">
+  window.onload = function () {
+    
+    
+    var url = "https:\/\/bhavyagoel.github.io" + 'posts\/researchPDF\/rp-1.pdf';
+    var hidePaginator = "";
+
+    
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+    
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/bhavyagoel.github.io" + '/js/pdf-js/build/pdf.worker.js';
+
+    
+    var pdfDoc = null,
+      pageNum = 1,
+      pageRendering = false,
+      pageNumPending = null,
+      scale = 3,
+      canvas = document.getElementById('the-canvas'),
+      ctx = canvas.getContext('2d');
+
+    
+
+    function renderPage(num) {
+      pageRendering = true;
+      
+      pdfDoc.getPage(num).then(function (page) {
+        var viewport = page.getViewport({ scale: scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        
+        var renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        var renderTask = page.render(renderContext);
+
+        
+        renderTask.promise.then(function () {
+          pageRendering = false;
+          if (pageNumPending !== null) {
+            
+            renderPage(pageNumPending);
+            pageNumPending = null;
+          }
+        });
+      });
+
+      
+      document.getElementById('page_num').textContent = num;
+    }
+
+    
+
+    function queueRenderPage(num) {
+      if (pageRendering) {
+        pageNumPending = num;
+      } else {
+        renderPage(num);
+      }
+    }
+
+    
+
+    if (hidePaginator == "true") {
+      document.getElementById("paginator").style.display = 'none';
+    }
+
+    
+
+    function onPrevPage() {
+      if (pageNum <= 1) {
+        return;
+      }
+      pageNum--;
+      queueRenderPage(pageNum);
+    }
+    document.getElementById('prev').addEventListener('click', onPrevPage);
+
+    
+
+    function onNextPage() {
+      if (pageNum >= pdfDoc.numPages) {
+        return;
+      }
+      pageNum++;
+      queueRenderPage(pageNum);
+    }
+    document.getElementById('next').addEventListener('click', onNextPage);
+
+    
+
+    pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+      pdfDoc = pdfDoc_;
+      document.getElementById('page_count').textContent = pdfDoc.numPages;
+
+      
+      renderPage(pageNum);
+    });
+  }
+
+</script>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Zimmermann, C.; Brox, T. Learning to estimate 3d hand pose from single rgb images. In Proceedings of the IEEE International Conference on Computer Vision, Venice, Italy, 22–29 October 2017; pp. 4903–4911.M&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Xu, C.; Cai, W.; Li, Y.; Zhou, J.; Wei, L. Accurate Hand Detection from Single-Color Images by Reconstructing Hand Appearances.Sensors 2020, 20, 192. <a href="https://www.mdpi.com/1424-8220/20/1/192">CrossRef</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/bhavyagoel/bhavyagoel.dev.repo/edit/main/content/posts/research-paper/ai/rp-1/index.md" title="Improve this page" target="_blank" rel="noopener">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="../../../../posts/research-paper/ai/rp-2/" title="Active Learning: Theory and Applications to Automatic Speech Recognition" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Active Learning: Theory and Applications to Automatic Speech Recognition</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="../../../../posts/research-paper/blockchain/" title="Blockchain Research" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">Blockchain Research</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#semi-supervised-scheme">Semi-Supervised Scheme</a></li>
+        <li><a href="#approach">Approach</a>
+          <ul>
+            <li><a href="#framework">Framework</a></li>
+            <li><a href="#hand-image-reconstruction">Hand Image Reconstruction</a></li>
+            <li><a href="#semi-supervised">Semi-Supervised</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#research-paper">Research paper</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      
+      <div class="col-md-6 col-sm-12">
+        <h4 style="color: white;">Navigation</h4>
+        
+        <ul>
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#about" style="color:lightcyan;">About</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#skills" style="color:lightcyan;">Skills</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#experiences" style="color:lightcyan;">Experiences</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#education" style="color:lightcyan;">Education</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#projects" style="color:lightcyan;">Projects</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#recent-posts" style="color:lightcyan;">Recent Posts</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#accomplishments" style="color:lightcyan;">Accomplishments</a>
+          </li>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item" >
+            <a class="smooth-scroll" href="../../../../#achievements" style="color:lightcyan;">Achievements</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+      
+      
+      <div class="col-md-6 col-sm-12">
+        <h4 style="color: white;" >Contact me:</h4>
+        <ul>
+          
+          <li>
+            <strong style="color: white;">
+            <span style="color: white;">Email: </span></strong>
+            <span style="color:lightcyan;">bgoel4132@gmail.com</span>
+          </li>
+          
+          <li>
+            <strong style="color: white;">
+            <span style="color: white;">Location: </span></strong>
+            <span style="color:lightcyan;">Ghaziabad, India</span>
+          </li>
+          
+          <li>
+            <strong style="color: white;">
+            <span style="color: white;">Phone: </span></strong>
+            <span style="color:lightcyan;">&#43;91 7042089702</span>
+          </li>
+          
+          <li>
+            <strong style="color: white;">
+            <span style="color: white;">Telegram: </span></strong>
+            <span style="color:lightcyan;">t.me/bgoel4132</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
+      
+      
+      <div class="col-md-4 col-sm-12">
+        <p></p>
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    <script type="text/javascript" src="../../../../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../../../../js/popper.min.js"></script>
+<script type="text/javascript" src="../../../../js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../../../js/navbar.js"></script>
+<script type="text/javascript" src="../../../../js/plyr.js"></script>
+<script type="text/javascript" src="../../../../js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="../../../../js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);">
+</script>
+
+
+
+  </body>
+</html>

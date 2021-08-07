@@ -6,7 +6,7 @@
     <description>Recent content on Bhavya Goel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jul 2021 18:46:31 +0530</lastBuildDate><atom:link href="https://bhavyagoel.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Aug 2021 00:11:53 +0530</lastBuildDate><atom:link href="https://bhavyagoel.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash Variables</title>
       <link>https://bhavyagoel.github.io/notes/test/sub-test/</link>
@@ -342,11 +342,20 @@ Initial setup Search depends on additional output content type of JSON in config
     </item>
     
     <item>
-      <title>Semi Supervised Joint Learning for Hand Gesture Recognition</title>
-      <link>https://bhavyagoel.github.io/posts/ai/imgproc/gestrecog/rp_1/</link>
+      <title>Active Learning: Theory and Applications to Automatic Speech Recognition</title>
+      <link>https://bhavyagoel.github.io/posts/research-paper/ai/rp-2/</link>
       <pubDate>Wed, 14 Jul 2021 18:46:31 +0530</pubDate>
       
-      <guid>https://bhavyagoel.github.io/posts/ai/imgproc/gestrecog/rp_1/</guid>
+      <guid>https://bhavyagoel.github.io/posts/research-paper/ai/rp-2/</guid>
+      <description>Research paper    #the-canvas { border: 1px solid black; direction: ltr; width: 100%; height: auto; } #paginator { text-align: center; margin-bottom: 10px; }  Previous Next &amp;nbsp; &amp;nbsp; Page:  /     window.onload = function () { var url = &#34;https:\/\/bhavyagoel.github.io&#34; + &#39;posts\/researchPDF\/rp-2.pdf&#39;; var hidePaginator = &#34;&#34;; var pdfjsLib = window[&#39;pdfjs-dist/build/pdf&#39;]; pdfjsLib.GlobalWorkerOptions.workerSrc = &#34;https:\/\/bhavyagoel.github.io&#34; + &#39;/js/pdf-js/build/pdf.worker.js&#39;; var pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null, scale = 3, canvas = document.</description>
+    </item>
+    
+    <item>
+      <title>Semi Supervised Joint Learning for Hand Gesture Recognition</title>
+      <link>https://bhavyagoel.github.io/posts/research-paper/ai/rp-1/</link>
+      <pubDate>Wed, 14 Jul 2021 18:46:31 +0530</pubDate>
+      
+      <guid>https://bhavyagoel.github.io/posts/research-paper/ai/rp-1/</guid>
       <description>Features  This is for Static Gestures Hand Gesture and Hand Pose Recognition Semi-Supervised learning scheme used to solve the problem of lacking proper annotation 3-D Hand Pose with foreground hand, and hand gesture Unconstrained environment dataset  &amp;ndash; Hand Posture: Only classify in classes &amp;ndash; Hand Posture: positions of finger joints, view point, rotation, scale and so on.
 Semi-Supervised Scheme   Knowledge Transfer: Transfer annotation by extracting shared features from hand gesture to hand pose and vice versa.</description>
     </item>
